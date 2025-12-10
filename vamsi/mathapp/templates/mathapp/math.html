@@ -1,0 +1,58 @@
+<html>
+<head>
+    <title>Mileage of Vehicle</title>
+    <style>
+        body 
+        {
+            background-color: rgb(31, 208, 208)
+        }
+        .id1 
+        {
+            text-align: center;
+            color: rgb(30, 0, 255);
+        }
+        .box 
+        {
+            text-align: center;
+            width: 40%;
+            background-color: rgb(181, 113, 24);
+            border: solid 6px rgb(31, 29, 31);
+            padding: 25px;
+            margin: 60px auto;
+        }
+        .result 
+        {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="id1"><u>The Mileage Calculator</u></h1>
+    <div class="box">
+        
+        <form method="post">
+            {% csrf_token %}
+            <label>Distance Travelled (km)</label><br>
+            <input type="number" name="distance"><br><br>
+
+            <label>Liters Consumed (L)</label><br>
+            <input type="number" name="liters"><br><br>
+
+            <button type="submit">Calculate</button>
+        </form>
+
+        <div class="result">
+            
+                Mileage: {{ mileage }} km/L
+            
+        </div>
+    </div>
+    <footer style="text-align: center; color: rgb(139, 95, 0); font-size: xx-large;">
+        
+        E.Vamsi Krishna (25005454)
+    </footer>
+</body>
+</html>
+
+
